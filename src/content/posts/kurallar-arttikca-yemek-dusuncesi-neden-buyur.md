@@ -6,10 +6,10 @@ publishDate: 2026-04-18
 updatedDate: 2026-04-18
 category: "psikoloji"
 tags: ["diyet-kulturu", "kisitlama", "yemek-psikolojisi"]
-coverImage: "https://images.unsplash.com/photo-1752217032996-e7f1f4f9cc5f?crop=entropy&cs=tinysrgb&fm=jpg&ixid=M3w3MjUzNDZ8MHwxfGFsbHwxfHx8fHx8Mnx8MTc2MDgxNzQ4N3w&ixlib=rb-4.1.0&q=80&w=1600"
+coverImage: "https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1600"
 coverImageAlt: "Mutfakta hazırlık yapan bir kişi ve pencere ışığıyla aydınlanan sakin ev ortamı"
-coverImageCreditName: "Odile"
-coverImageCreditUrl: "https://unsplash.com/photos/woman-is-preparing-something-in-the-kitchen-zSWFICx44nM"
+coverImageCreditName: "Trang Doan"
+coverImageCreditUrl: "https://www.pexels.com/photo/top-view-photo-of-vegetable-salad-on-plate-1640774/"
 author: "Editoryal ekip"
 readingTime: 8
 featured: false

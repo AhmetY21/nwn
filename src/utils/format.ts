@@ -14,12 +14,13 @@ export function absoluteUrl(pathname: string): string {
 
 export function withBase(pathname: string): string {
   const baseUrl = import.meta.env.BASE_URL;
+  const baseWithSlash = baseUrl.endsWith("/") ? baseUrl : `${baseUrl}/`;
 
   if (pathname === "/" || pathname.length === 0) {
-    return baseUrl;
+    return baseWithSlash;
   }
 
   const normalizedPath = pathname.replace(/^\/+/, "");
 
-  return `${baseUrl}${normalizedPath}`;
+  return `${baseWithSlash}${normalizedPath}`;
 }

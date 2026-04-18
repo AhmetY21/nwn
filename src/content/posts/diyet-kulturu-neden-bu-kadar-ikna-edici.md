@@ -6,10 +6,10 @@ publishDate: 2026-04-18
 updatedDate: 2026-04-18
 category: "diyet-kulturu"
 tags: ["diyet-kulturu", "beden-algisi", "bilim-okuryazarligi"]
-coverImage: "https://images.unsplash.com/photo-1766317983263-fad0e142f0df?crop=entropy&cs=tinysrgb&fm=jpg&ixid=M3w3MjUzNDZ8MHwxfGFsbHwxfHx8fHx8Mnx8MTc2MDgxNzQ4N3w&ixlib=rb-4.1.0&q=80&w=1600"
+coverImage: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1600"
 coverImageAlt: "Mutfak tezgahında hamur hazırlayan eller ve sıcak ev ışığı"
-coverImageCreditName: "Jakub Żerdzicki"
-coverImageCreditUrl: "https://unsplash.com/photos/person-preparing-food-in-a-kitchen-qwrQ5VmDuOE"
+coverImageCreditName: "Trang Doan"
+coverImageCreditUrl: "https://www.pexels.com/photo/vegetable-salad-on-white-ceramic-plate-1640777/"
 author: "Editoryal ekip"
 readingTime: 8
 featured: false
@@ -55,4 +55,3 @@ Bu soruların amacı kişiyi bir karşı-kurallar listesine sokmak değil. Daha 
 - Washburn RA, Szabo AN, Lambourne K, et al. *Does the method of weight loss effect long-term changes in weight, body composition or chronic disease risk factors in overweight or obese adults? A systematic review.* PLoS One. 2014. [PubMed](https://pubmed.ncbi.nlm.nih.gov/25333384/)
 - Hensley-Hackett K, Bosker J, Keefe A, et al. *Intuitive Eating Intervention and Diet Quality in Adults: A Systematic Literature Review.* J Nutr Educ Behav. 2022. [PubMed](https://pubmed.ncbi.nlm.nih.gov/36274010/)
 - Bruce LJ, Ricciardelli LA. *A systematic review of the psychosocial correlates of intuitive eating among adult women.* Appetite. 2016. [PubMed](https://pubmed.ncbi.nlm.nih.gov/26474781/)
-
