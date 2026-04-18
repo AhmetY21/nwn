@@ -6,8 +6,10 @@ publishDate: 2026-04-18
 updatedDate: 2026-04-18
 category: "beden-farkindalgi"
 tags: ["interosepsiyon", "aclik", "sezgisel-beslenme"]
-coverImage: "./covers/hunger-signals.svg"
-coverImageAlt: "Masada çorba, ekmek ve meyve bulunan sıcak bir sofra"
+coverImage: "https://images.unsplash.com/photo-1746203170437-be4ffb5dfbb3?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1600"
+coverImageAlt: "Doğal ışık alan masada birlikte paylaşılmaya hazır sıcak bir öğün"
+coverImageCreditName: "hosein fayton"
+coverImageCreditUrl: "https://unsplash.com/photos/a-table-with-food-set-out-for-a-meal-Yt05x22XcPk"
 author: "Editoryal ekip"
 readingTime: 7
 featured: true
@@ -52,4 +54,3 @@ Bugün açlığı geç fark etmiş olman, bedeninin bozuk olduğu anlamına gelm
 - Martin E, Dourish CT, Rotshtein P, Spetter MS, Higgs S. *Interoception and disordered eating: A systematic review.* Neurosci Biobehav Rev. 2019. [PubMed](https://pubmed.ncbi.nlm.nih.gov/31454626/)
 - Babbott KM, Cavadino A, Brenton-Peters J, Consedine NS, Roberts M. *Outcomes of intuitive eating interventions: a systematic review and meta-analysis.* Eat Disord. 2023. [PubMed](https://pubmed.ncbi.nlm.nih.gov/35400300/)
 - Hensley-Hackett K, Bosker J, Keefe A, Reidlinger D, Warner M, D'Arcy A, Utter J. *Intuitive Eating Intervention and Diet Quality in Adults: A Systematic Literature Review.* J Nutr Educ Behav. 2022. [PubMed](https://pubmed.ncbi.nlm.nih.gov/36274010/)
-

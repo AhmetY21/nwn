@@ -1,4 +1,5 @@
 ---
+import ButtonLink from "../components/ui/button-link.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const title = "Manifesto | Bedenin Sesi";
@@ -16,6 +17,14 @@ const description =
       <p class="mt-6 max-w-3xl text-lg text-muted md:text-xl">
         Bedeni yönetilecek bir proje, yemeği denetlenecek bir tehdit ve kişiyi de sürekli eksik biri gibi konumlandıran anlatıların dışında duruyoruz.
       </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <ButtonLink href="/makaleler" variant="primary">
+          Makalelere geç
+        </ButtonLink>
+        <ButtonLink href="/bekleme-listesi" variant="secondary">
+          Bekleme listesi
+        </ButtonLink>
+      </div>
     </div>
   </section>
 
@@ -47,5 +56,64 @@ const description =
       </article>
     </div>
   </section>
-</BaseLayout>
 
+  <section class="container-shell pb-14 md:pb-20">
+    <div class="grid gap-6 lg:grid-cols-[1fr_1.2fr]">
+      <aside class="rounded-[1.75rem] border border-border bg-surface p-8 shadow-card">
+        <p class="eyebrow">Ne yapıyoruz?</p>
+        <ul class="mt-5 space-y-4 text-muted">
+          <li>Diyet kültürünün beden ve zihin üzerindeki etkilerini anlaşılır dille açıyoruz.</li>
+          <li>Açlık, tokluk ve duygusal tetiklenme gibi sinyalleri fark etmeye alan açan içerikler yayımlıyoruz.</li>
+          <li>Beslenme bilgisini ahlaki puanlama üretmeden, araştırma ve bağlam üzerinden konuşuyoruz.</li>
+        </ul>
+      </aside>
+
+      <div class="rounded-[1.75rem] border border-border bg-bg p-1">
+        <div class="rounded-[1.5rem] bg-surface p-8">
+          <p class="eyebrow">Ne yapmıyoruz?</p>
+          <h2 class="mt-3 text-3xl leading-tight">
+            Bu platformu bilinçli olarak dar tutuyoruz.
+          </h2>
+          <div class="mt-5 grid gap-4 md:grid-cols-2">
+            <article class="rounded-[1.25rem] border border-border bg-bg p-5">
+              <h3 class="text-xl">Takip, ölçüm, puan yok</h3>
+              <p class="mt-2 text-sm text-muted">
+                Kalori, makro, ilerleme grafiği ya da “iyi-kötü gün” puanlaması yok. Çünkü bu MVP bir izleme aracı değil, bir düşünme alanı.
+              </p>
+            </article>
+            <article class="rounded-[1.25rem] border border-border bg-bg p-5">
+              <h3 class="text-xl">Beden vaadi yok</h3>
+              <p class="mt-2 text-sm text-muted">
+                Daha küçük beden, hızlı dönüşüm veya garantili sonuç dili kullanmıyoruz. Bu hem etik değil hem de misyonumuzla çelişiyor.
+              </p>
+            </article>
+            <article class="rounded-[1.25rem] border border-border bg-bg p-5">
+              <h3 class="text-xl">Ders veren ton yok</h3>
+              <p class="mt-2 text-sm text-muted">
+                Okuru eksik, bilgisiz ya da disiplinsiz biri gibi konumlandıran bir editoryal ses bu alana girmiyor.
+              </p>
+            </article>
+            <article class="rounded-[1.25rem] border border-border bg-bg p-5">
+              <h3 class="text-xl">Gizli pazarlama yok</h3>
+              <p class="mt-2 text-sm text-muted">
+                İçeriği ürün satış metnine çevirmemek, özellikle bu alanda güvenin korunması için temel ilkemiz.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-shell pb-14 md:pb-20">
+    <div class="rounded-[2rem] border border-border bg-surface p-8 shadow-card md:p-10">
+      <p class="eyebrow">Editoryal söz</p>
+      <h2 class="mt-3 text-3xl leading-tight md:text-4xl">
+        Her yazı okuru daha utanmış değil, biraz daha yer açılmış bırakmalı.
+      </h2>
+      <p class="mt-4 max-w-3xl text-muted">
+        İçeriğin doğruluğu kadar etkisiyle de ilgileniyoruz. Doğru bilgi, eğer okurda daha fazla korku ve sıkışma yaratıyorsa, bizim için hâlâ eksik işlenmiş bilgidir. Bu yüzden burada merak, bağlam ve bakım birlikte ilerler.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

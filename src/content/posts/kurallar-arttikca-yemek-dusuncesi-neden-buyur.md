@@ -6,8 +6,10 @@ publishDate: 2026-04-18
 updatedDate: 2026-04-18
 category: "psikoloji"
 tags: ["diyet-kulturu", "kisitlama", "yemek-psikolojisi"]
-coverImage: "./covers/food-thoughts.svg"
-coverImageAlt: "Mutfak masasında düşünceli şekilde oturan bir kişi ve yanında sıcak bir içecek"
+coverImage: "https://images.unsplash.com/photo-1752217032996-e7f1f4f9cc5f?crop=entropy&cs=tinysrgb&fm=jpg&ixid=M3w3MjUzNDZ8MHwxfGFsbHwxfHx8fHx8Mnx8MTc2MDgxNzQ4N3w&ixlib=rb-4.1.0&q=80&w=1600"
+coverImageAlt: "Mutfakta hazırlık yapan bir kişi ve pencere ışığıyla aydınlanan sakin ev ortamı"
+coverImageCreditName: "Odile"
+coverImageCreditUrl: "https://unsplash.com/photos/woman-is-preparing-something-in-the-kitchen-zSWFICx44nM"
 author: "Editoryal ekip"
 readingTime: 8
 featured: false
@@ -54,4 +56,3 @@ Bu işareti fark etmek, hemen huzur getirmeyebilir. Ama en azından döngüyü a
 - Mason TB, Dolgon-Krutolow A, Smith KE. *A Systematic Review of Moderators of the Association between Dietary Restraint and Binge Eating.* Obesities. 2024. [PubMed](https://pubmed.ncbi.nlm.nih.gov/39649010/)
 - Bruce LJ, Ricciardelli LA. *A systematic review of the psychosocial correlates of intuitive eating among adult women.* Appetite. 2016. [PubMed](https://pubmed.ncbi.nlm.nih.gov/26474781/)
 - Babbott KM, Cavadino A, Brenton-Peters J, Consedine NS, Roberts M. *Outcomes of intuitive eating interventions: a systematic review and meta-analysis.* Eat Disord. 2023. [PubMed](https://pubmed.ncbi.nlm.nih.gov/35400300/)
-

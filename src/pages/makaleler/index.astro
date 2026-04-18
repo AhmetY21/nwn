@@ -1,5 +1,6 @@
 ---
 import PostList from "../../components/content/post-list.astro";
+import ButtonLink from "../../components/ui/button-link.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { CATEGORY_LABELS } from "../../consts";
 import { getAllPosts } from "../../utils/content";
@@ -40,8 +41,57 @@ const categorySummary = Object.entries(CATEGORY_LABELS)
     </div>
   </section>
 
+  <section class="container-shell pb-14">
+    <div class="grid gap-6 lg:grid-cols-2">
+      <article class="rounded-[1.75rem] border border-border bg-surface p-7 shadow-card">
+        <p class="eyebrow">Makaleler</p>
+        <h2 class="mt-3 text-3xl">Yorumlayan ve çerçeve kuran alan</h2>
+        <p class="mt-4 text-muted">
+          Makaleler; araştırmaları, günlük deneyimi ve dilin etkisini birlikte ele alan editoryal yazılardır. Burada amaç sadece link vermek değil, “bu bilgi hayatımda ne anlama geliyor?” sorusuna alan açmaktır.
+        </p>
+      </article>
+      <article class="rounded-[1.75rem] border border-border bg-surface p-7 shadow-card">
+        <p class="eyebrow">Kaynaklar</p>
+        <h2 class="mt-3 text-3xl">Doğrudan başvurulacak referans alanı</h2>
+        <p class="mt-4 text-muted">
+          Kaynaklar sayfası ise daha çıplak bir referans rafı gibi düşünülmeli: çalışma bağlantıları, meslek örgütleri ve başlangıç okumaları. Makale anlatır; kaynak gösterir. İkisi birbirini tamamlar.
+        </p>
+        <div class="mt-5">
+          <ButtonLink href="/kaynaklar" variant="secondary">
+            Kaynaklara git
+          </ButtonLink>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="container-shell pb-14 md:pb-20">
+    <div class="rounded-[2rem] border border-border bg-surface p-8 shadow-card">
+      <p class="eyebrow">Nasıl yazıyoruz?</p>
+      <div class="mt-5 grid gap-5 md:grid-cols-3">
+        <article>
+          <h2 class="text-2xl">Yargısız</h2>
+          <p class="mt-2 text-sm text-muted">
+            Yemek davranışını karakter testi gibi değil, bağlamla ilişkili bir deneyim gibi ele alıyoruz.
+          </p>
+        </article>
+        <article>
+          <h2 class="text-2xl">Kanıta dayalı</h2>
+          <p class="mt-2 text-sm text-muted">
+            Mümkün olduğunda derlemeleri ve meta-analizleri öne alıyor, tek çalışmadan büyük sonuçlar çıkarmıyoruz.
+          </p>
+        </article>
+        <article>
+          <h2 class="text-2xl">Türkçe düşünen</h2>
+          <p class="mt-2 text-sm text-muted">
+            Çeviri kokan sağlık dili yerine, yerel ve saygılı bir anlatım kurmaya çalışıyoruz.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="container-shell pb-14 md:pb-20">
     <PostList posts={posts} />
   </section>
 </BaseLayout>
-
