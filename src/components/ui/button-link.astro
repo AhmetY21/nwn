@@ -1,0 +1,39 @@
+---
+import { withBase } from "../../utils/format";
+
+interface Props {
+  href: string;
+  variant?: "primary" | "secondary";
+  target?: "_blank" | "_self";
+  rel?: string;
+  ariaLabel?: string;
+}
+
+const {
+  href,
+  variant = "primary",
+  target,
+  rel,
+  ariaLabel
+} = Astro.props;
+
+const isExternal = href.startsWith("http");
+const resolvedHref = isExternal ? href : withBase(href);
+const resolvedTarget = isExternal ? target ?? "_blank" : target;
+const resolvedRel = isExternal ? rel ?? "noopener noreferrer" : rel;
+---
+
+<a
+  href={resolvedHref}
+  target={resolvedTarget}
+  rel={resolvedRel}
+  aria-label={ariaLabel}
+  class:list={[
+    "focus-ring inline-flex items-center justify-center rounded-full border px-5 py-3 text-sm font-medium transition-colors",
+    variant === "primary"
+      ? "border-accent bg-accent text-bg hover:border-text hover:bg-text"
+      : "border-border bg-surface text-text hover:border-accent hover:text-accent"
+  ]}
+>
+  <slot />
+</a>

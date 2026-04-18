@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #fbf7f2;
+  --color-surface: #f4eee4;
+  --color-text: #1f2420;
+  --color-muted: #6b6b63;
+  --color-accent: #5c7f5c;
+  --color-highlight: #c87856;
+  --color-border: #e5dfd3;
+  --font-serif: "Literata";
+  --font-sans: "IBM Plex Sans";
+}
+
+html {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans), Inter, system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  background:
+    radial-gradient(circle at top right, rgba(200, 120, 86, 0.08), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(92, 127, 92, 0.08), transparent 24%),
+    var(--color-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif), Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  color: var(--color-bg);
+  background-color: var(--color-accent);
+}
+
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg;
+}
+
+.container-shell {
+  @apply mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8;
+}
+
+.eyebrow {
+  @apply text-sm font-medium uppercase tracking-[0.24em] text-muted;
+}
+
+.section-title {
+  @apply text-3xl leading-tight md:text-4xl;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,109 @@
+---
+import PostList from "../components/content/post-list.astro";
+import WaitlistForm from "../components/forms/waitlist-form.astro";
+import ButtonLink from "../components/ui/button-link.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../consts";
+import { getAllPosts } from "../utils/content";
+
+const posts = await getAllPosts();
+const featuredPosts = posts.filter((post) => post.data.featured);
+const recentPosts = posts.slice(0, 3);
+---
+
+<BaseLayout title={SITE.title} description={SITE.description} pathname="/">
+  <section class="container-shell py-14 md:py-20">
+    <div class="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+      <div class="max-w-3xl">
+        <p class="eyebrow">Türkçe, kanıta dayalı ve yargısız</p>
+        <h1 class="mt-4 text-5xl leading-[1.02] md:text-7xl">
+          Bedenin sinyallerini yeniden duymak mümkün.
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg text-muted md:text-2xl">
+          Bu alan, diyet kültürünün gürültüsünden biraz uzaklaşıp açlık, tokluk, ihtiyaç ve bakım hakkında daha net düşünmek isteyenler için kuruldu.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <ButtonLink href="/makaleler" variant="primary">
+            Yazıları keşfet
+          </ButtonLink>
+          <ButtonLink href="/manifesto" variant="secondary">
+            Yaklaşımı oku
+          </ButtonLink>
+        </div>
+      </div>
+
+      <aside class="rounded-[2rem] border border-border bg-surface p-6 shadow-card md:p-8">
+        <p class="eyebrow">Neye odaklanıyoruz?</p>
+        <ul class="mt-5 space-y-5 text-base text-muted">
+          <li>
+            Diyet kültürünün nasıl işlediğini, neden bu kadar yorucu olduğunu ve beden algımızı nasıl şekillendirdiğini açıklıyoruz.
+          </li>
+          <li>
+            Açlık ve tokluk sinyalleriyle yeniden temas kurmayı destekleyen pratik, nazik ve uygulanabilir içerikler hazırlıyoruz.
+          </li>
+          <li>
+            Beslenme bilgisini suçluluk üretmeden, sade ve araştırma temelli bir dille ele alıyoruz.
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="container-shell pb-14 md:pb-20">
+    <div class="grid gap-6 md:grid-cols-3">
+      <article class="rounded-[1.75rem] border border-border bg-surface p-6">
+        <p class="eyebrow">01</p>
+        <h2 class="mt-3 text-2xl">İlişki onarımı</h2>
+        <p class="mt-3 text-muted">
+          Başarıyı sayıların değil, bedenle ve yemekle kurulan ilişkinin daha güvenli hale gelmesinin üzerinden konuşuyoruz.
+        </p>
+      </article>
+      <article class="rounded-[1.75rem] border border-border bg-surface p-6">
+        <p class="eyebrow">02</p>
+        <h2 class="mt-3 text-2xl">Beden farkındalığı</h2>
+        <p class="mt-3 text-muted">
+          Açlık, tokluk, yorgunluk ve duygusal tetiklenme gibi sinyalleri yeniden ayırt etmeyi öğrenmek bu alanın merkezinde.
+        </p>
+      </article>
+      <article class="rounded-[1.75rem] border border-border bg-surface p-6">
+        <p class="eyebrow">03</p>
+        <h2 class="mt-3 text-2xl">Bilimsel netlik</h2>
+        <p class="mt-3 text-muted">
+          Kesinlik iddiası yerine mevcut kanıtları, sınırlılıkları ve günlük hayata değen anlamlarını birlikte açıyoruz.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  {
+    featuredPosts.length > 0 ? (
+      <section class="container-shell pb-14 md:pb-20">
+        <div class="mb-8 flex items-end justify-between gap-4">
+          <div>
+            <p class="eyebrow">Öne çıkan yazı</p>
+            <h2 class="section-title mt-2">İlk okumalar için seçtiklerimiz</h2>
+          </div>
+        </div>
+        <PostList posts={featuredPosts.slice(0, 1)} />
+      </section>
+    ) : null
+  }
+
+  <section class="container-shell pb-14 md:pb-20">
+    <div class="mb-8 flex items-end justify-between gap-4">
+      <div>
+        <p class="eyebrow">Son yazılar</p>
+        <h2 class="section-title mt-2">Şimdiden yayında olan içerikler</h2>
+      </div>
+      <ButtonLink href="/makaleler" variant="secondary">
+        Tüm makaleler
+      </ButtonLink>
+    </div>
+    <PostList posts={recentPosts} />
+  </section>
+
+  <section class="container-shell pb-14 md:pb-20">
+    <WaitlistForm />
+  </section>
+</BaseLayout>
+

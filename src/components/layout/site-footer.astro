@@ -1,0 +1,30 @@
+---
+import ButtonLink from "../ui/button-link.astro";
+---
+
+<footer class="border-t border-border">
+  <div class="container-shell grid gap-10 py-12 md:grid-cols-[1.4fr_1fr] md:items-end">
+    <div class="max-w-2xl">
+      <p class="eyebrow">Editoryal not</p>
+      <h2 class="mt-3 text-3xl leading-tight">
+        Bedeni düzeltilecek bir proje gibi değil, ilişki kurulacak bir alan gibi ele alıyoruz.
+      </h2>
+      <p class="mt-4 text-muted">
+        Bu platform tıbbi tanı veya psikoterapinin yerine geçmez. Özellikle yeme bozukluğu belirtileri yaşıyorsan profesyonel destek almak güvenli bir ilk adımdır.
+      </p>
+    </div>
+
+    <div class="rounded-[1.75rem] border border-border bg-surface p-6">
+      <p class="font-serif text-2xl">Yeni yazılar yayımlandığında haberdar ol.</p>
+      <p class="mt-3 text-sm text-muted">
+        Bekleme listesi sayfasında, seçilecek e-posta altyapısına hazır erişilebilir form bulunuyor.
+      </p>
+      <div class="mt-5">
+        <ButtonLink href="/bekleme-listesi" variant="primary">
+          Bekleme listesine git
+        </ButtonLink>
+      </div>
+    </div>
+  </div>
+</footer>
+

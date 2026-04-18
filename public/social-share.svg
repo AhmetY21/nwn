@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#FBF7F2" />
+  <rect x="50" y="50" width="1100" height="530" rx="38" fill="#F4EEE4" stroke="#E5DFD3" />
+  <circle cx="1040" cy="158" r="62" fill="#C87856" opacity="0.85" />
+  <circle cx="950" cy="498" r="96" fill="#5C7F5C" opacity="0.18" />
+  <text x="100" y="228" fill="#1F2420" font-size="38" font-family="Georgia, serif">Bedenin Sesi</text>
+  <text x="100" y="320" fill="#1F2420" font-size="78" font-family="Georgia, serif">Bedenin sinyallerini</text>
+  <text x="100" y="398" fill="#1F2420" font-size="78" font-family="Georgia, serif">yeniden duymak mümkün.</text>
+  <text x="100" y="488" fill="#6B6B63" font-size="30" font-family="Inter, Arial, sans-serif">Diyet kültüründen uzak, kanıta dayalı ve şefkatli bir içerik alanı.</text>
+</svg>
+

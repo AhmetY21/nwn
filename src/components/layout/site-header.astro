@@ -1,0 +1,82 @@
+---
+import { NAV_ITEMS, SITE } from "../../consts";
+import { withBase } from "../../utils/format";
+
+interface Props {
+  pathname: string;
+}
+
+const { pathname } = Astro.props;
+
+function isActive(itemPath: string): boolean {
+  if (itemPath === "/") {
+    return pathname === "/";
+  }
+
+  return pathname === itemPath || pathname.startsWith(`${itemPath}/`);
+}
+---
+
+<header class="sticky top-0 z-40 border-b border-border/80 bg-bg/95 backdrop-blur">
+  <div class="container-shell flex items-center justify-between gap-6 py-5">
+    <a
+      href={withBase("/")}
+      class="focus-ring inline-flex items-center gap-3 rounded-full text-left"
+      aria-label={`${SITE.name} ana sayfa`}
+    >
+      <span class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface font-serif text-lg">
+        B
+      </span>
+      <span>
+        <span class="block font-serif text-xl">{SITE.name}</span>
+        <span class="block text-sm text-muted">Diyet kültürünün dışında bir alan</span>
+      </span>
+    </a>
+
+    <nav aria-label="Ana gezinme" class="hidden md:block">
+      <ul class="flex items-center gap-2">
+        {
+          NAV_ITEMS.map((item) => (
+            <li>
+              <a
+                href={withBase(item.href)}
+                aria-current={isActive(item.href) ? "page" : undefined}
+                class:list={[
+                  "focus-ring rounded-full px-4 py-2 text-sm transition-colors",
+                  isActive(item.href)
+                    ? "bg-surface text-text"
+                    : "text-muted hover:bg-surface/70 hover:text-text"
+                ]}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+
+  <nav aria-label="Mobil gezinme" class="border-t border-border/80 md:hidden">
+    <ul class="container-shell flex gap-3 overflow-x-auto py-3">
+      {
+        NAV_ITEMS.map((item) => (
+          <li class="shrink-0">
+            <a
+              href={withBase(item.href)}
+              aria-current={isActive(item.href) ? "page" : undefined}
+              class:list={[
+                "focus-ring block rounded-full border px-4 py-2 text-sm",
+                isActive(item.href)
+                  ? "border-accent bg-accent text-bg"
+                  : "border-border bg-surface text-text"
+              ]}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>

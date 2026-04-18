@@ -1,0 +1,40 @@
+---
+import ButtonLink from "../components/ui/button-link.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "İletişim | Bedenin Sesi";
+const description =
+  "Bu platformla iletişim kurmak, iş birlikleri hakkında yazmak veya önemli bir düzeltme paylaşmak için iletişim sayfası.";
+---
+
+<BaseLayout title={title} description={description} pathname="/iletisim">
+  <section class="container-shell py-14 md:py-20">
+    <div class="grid gap-8 lg:grid-cols-[1fr_0.9fr]">
+      <div class="max-w-3xl">
+        <p class="eyebrow">İletişim</p>
+        <h1 class="mt-4 text-5xl leading-tight md:text-6xl">
+          Düzeltme, öneri ya da iş birliği için yazabilirsin.
+        </h1>
+        <p class="mt-6 text-lg text-muted">
+          Marka adı, alan adı ve kalıcı iletişim adresi netleşene kadar bu sayfa editoryal yönlendirme mantığıyla hazırlanmıştır. Kalıcı kanal seçildiğinde bu bölüm güncellenecek.
+        </p>
+      </div>
+
+      <aside class="rounded-[2rem] border border-border bg-surface p-7 shadow-card">
+        <h2 class="text-2xl">Önemli not</h2>
+        <p class="mt-4 text-muted">
+          Akut sıkıntı, yoğun kısıtlama, kendine zarar verme düşüncesi ya da yeme bozukluğu belirtileri yaşıyorsan içerik tüketmek yerine doğrudan profesyonel destek aramak daha güvenli olabilir.
+        </p>
+        <div class="mt-6">
+          <ButtonLink
+            href="https://psikiyatri.org.tr/halka-yonelik/32/yeme-bozukluklari"
+            variant="secondary"
+          >
+            Türkiye Psikiyatri Derneği kaynağı
+          </ButtonLink>
+        </div>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
+

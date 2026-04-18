@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ahmety21.github.io/nwn/sitemap-index.xml
+

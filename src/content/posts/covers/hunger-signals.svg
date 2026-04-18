@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#FBF7F2" />
+  <rect x="90" y="90" width="1420" height="820" rx="48" fill="#F4EEE4" />
+  <circle cx="1180" cy="240" r="96" fill="#C87856" opacity="0.8" />
+  <circle cx="1350" cy="700" r="126" fill="#5C7F5C" opacity="0.12" />
+  <ellipse cx="780" cy="540" rx="360" ry="220" fill="#fffaf4" stroke="#E5DFD3" stroke-width="20" />
+  <circle cx="670" cy="520" r="84" fill="#d58b63" opacity="0.85" />
+  <circle cx="830" cy="520" r="92" fill="#8aa27a" opacity="0.72" />
+  <path d="M720 650c40-56 120-56 160 0" fill="none" stroke="#1F2420" stroke-width="18" stroke-linecap="round" />
+  <text x="150" y="240" fill="#1F2420" font-size="52" font-family="Georgia, serif">Açlık sinyallerini yeniden tanımak</text>
+  <text x="150" y="320" fill="#6B6B63" font-size="30" font-family="Arial, sans-serif">Bedenin küçük işaretlerini yeniden duyabilmek üzerine</text>
+</svg>
+

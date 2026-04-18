@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Hakkımızda | Bedenin Sesi";
+const description =
+  "Platformun yaklaşımı, editoryal hedefi ve kimin için üretildiği üzerine kısa bir çerçeve.";
+---
+
+<BaseLayout title={title} description={description} pathname="/hakkimda">
+  <section class="container-shell py-14 md:py-20">
+    <div class="mx-auto max-w-4xl">
+      <p class="eyebrow">Hakkımızda</p>
+      <h1 class="mt-4 text-5xl leading-tight md:text-6xl">
+        Bu platform, suçluluk yerine anlayış üretmek için tasarlandı.
+      </h1>
+      <p class="mt-6 text-lg text-muted">
+        Diyet kültürünün dili çoğu zaman aynı anda hem çok gürültülü hem de çok yalnız bırakıcıdır. Burada daha sakin, daha dikkatli ve araştırmaya yaslanan bir editoryal alan kuruyoruz.
+      </p>
+    </div>
+  </section>
+
+  <section class="container-shell pb-14 md:pb-20">
+    <div class="grid gap-6 md:grid-cols-3">
+      <article class="rounded-[1.75rem] border border-border bg-surface p-6">
+        <h2 class="text-2xl">Kimin için?</h2>
+        <p class="mt-3 text-muted">
+          Yemek düşüncelerinden yorulmuş, çok sayıda kural denemiş ama kendine başka bir yol açmak isteyen kişiler için.
+        </p>
+      </article>
+      <article class="rounded-[1.75rem] border border-border bg-surface p-6">
+        <h2 class="text-2xl">Nasıl yazıyoruz?</h2>
+        <p class="mt-3 text-muted">
+          Türkçe düşünen, teknik ama mesafesiz, güven verici ama öğüt dağıtmayan bir tonla.
+        </p>
+      </article>
+      <article class="rounded-[1.75rem] border border-border bg-surface p-6">
+        <h2 class="text-2xl">Nereye gidiyor?</h2>
+        <p class="mt-3 text-muted">
+          İlk adımda güçlü bir içerik zemini kuruyoruz. Daha sonra, gerçekten ihtiyaç varsa ve etik olarak uygunsa yeni ürün katmanları değerlendirilecek.
+        </p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
+

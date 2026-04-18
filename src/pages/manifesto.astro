@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Manifesto | Bedenin Sesi";
+const description =
+  "Bu platformun neye karşı durduğunu ve neyi savunduğunu açıkça anlatan manifesto.";
+---
+
+<BaseLayout title={title} description={description} pathname="/manifesto">
+  <section class="container-shell py-14 md:py-20">
+    <div class="mx-auto max-w-4xl">
+      <p class="eyebrow">Manifesto</p>
+      <h1 class="mt-4 text-5xl leading-tight md:text-6xl">
+        Bu alan bir diyet vaadi sunmuyor. Tam tersini savunuyor.
+      </h1>
+      <p class="mt-6 max-w-3xl text-lg text-muted md:text-xl">
+        Bedeni yönetilecek bir proje, yemeği denetlenecek bir tehdit ve kişiyi de sürekli eksik biri gibi konumlandıran anlatıların dışında duruyoruz.
+      </p>
+    </div>
+  </section>
+
+  <section class="container-shell pb-14 md:pb-20">
+    <div class="grid gap-6 md:grid-cols-2">
+      <article class="rounded-[1.75rem] border border-border bg-surface p-8 shadow-card">
+        <h2 class="text-3xl">Başarı ölçümüz sayı değil, ilişki.</h2>
+        <p class="mt-4 text-muted">
+          Burada amaç, bedeni daha küçük hale getirmek değil; bedeni suç, korku ve kontrol ekseninden çıkarıp bakım ve farkındalık eksenine taşımak.
+        </p>
+      </article>
+      <article class="rounded-[1.75rem] border border-border bg-surface p-8 shadow-card">
+        <h2 class="text-3xl">Diyet kültürü nötr değildir.</h2>
+        <p class="mt-4 text-muted">
+          Bedenler hakkında hiyerarşi kurar, utanmayı normalleştirir ve yemekle ilişkiyi daraltır. Bu yüzden onun dilini yeniden üretmemeyi etik bir sorumluluk olarak görüyoruz.
+        </p>
+      </article>
+      <article class="rounded-[1.75rem] border border-border bg-surface p-8 shadow-card">
+        <h2 class="text-3xl">Bilim, basitleştirme değil açıklık ister.</h2>
+        <p class="mt-4 text-muted">
+          Beslenme bilimi karmaşıktır. Kesinlik vaat eden cümleler yerine, neyin güçlü kanıt taşıdığını ve neyin hâlâ tartışmalı olduğunu görünür kılmak istiyoruz.
+        </p>
+      </article>
+      <article class="rounded-[1.75rem] border border-border bg-surface p-8 shadow-card">
+        <h2 class="text-3xl">İnsanlar öğrenebilir.</h2>
+        <p class="mt-4 text-muted">
+          Açlık, tokluk, rahatlık, stres ve doyum gibi deneyimler yeniden fark edilebilir. Bu süreç irade testi değil, pratik ve destek gerektiren bir öğrenmedir.
+        </p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
+

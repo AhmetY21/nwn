@@ -1,0 +1,47 @@
+---
+import PostList from "../../components/content/post-list.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CATEGORY_LABELS } from "../../consts";
+import { getAllPosts } from "../../utils/content";
+
+const posts = await getAllPosts();
+const categorySummary = Object.entries(CATEGORY_LABELS)
+  .map(([key, label]) => ({
+    label,
+    count: posts.filter((post) => post.data.category === key).length
+  }))
+  .filter((item) => item.count > 0);
+---
+
+<BaseLayout
+  title="Makaleler | Bedenin Sesi"
+  description="Beden farkındalığı, diyet kültürü ve beslenme ilişkisi üzerine tüm yazılar."
+  pathname="/makaleler"
+>
+  <section class="container-shell py-14 md:py-20">
+    <div class="mx-auto max-w-4xl">
+      <p class="eyebrow">Makaleler</p>
+      <h1 class="mt-4 text-5xl leading-tight md:text-6xl">
+        Yemek ve beden ilişkisine daha geniş bir yerden bakmak için
+      </h1>
+      <p class="mt-6 text-lg text-muted">
+        Buradaki yazılar çözüm vaat eden kısa yollar değil; düşünmek, fark etmek ve biraz daha yer açmak için hazırlanmış uzun nefesli içerikler.
+      </p>
+    </div>
+
+    <div class="mt-8 flex flex-wrap gap-3">
+      {
+        categorySummary.map((item) => (
+          <span class="rounded-full border border-border bg-surface px-4 py-2 text-sm text-muted">
+            {item.label}: {item.count}
+          </span>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="container-shell pb-14 md:pb-20">
+    <PostList posts={posts} />
+  </section>
+</BaseLayout>
+

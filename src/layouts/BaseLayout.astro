@@ -1,0 +1,71 @@
+---
+import SiteFooter from "../components/layout/site-footer.astro";
+import SiteHeader from "../components/layout/site-header.astro";
+import { SITE } from "../consts";
+import "../styles/global.css";
+import { absoluteUrl, withBase } from "../utils/format";
+
+interface Props {
+  title: string;
+  description: string;
+  pathname?: string;
+  image?: string;
+  structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
+}
+
+const {
+  title,
+  description,
+  pathname = Astro.url.pathname,
+  image = SITE.defaultOgImage,
+  structuredData
+} = Astro.props;
+
+const canonical = absoluteUrl(pathname);
+const socialImage = image.startsWith("http") ? image : absoluteUrl(image);
+---
+
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={withBase("/favicon.svg")} type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    {structuredData ? (
+      <script
+        is:inline
+        type="application/ld+json"
+        set:html={JSON.stringify(structuredData)}
+      />
+    ) : null}
+  </head>
+  <body class="min-h-screen bg-bg text-text antialiased">
+    <a
+      href="#icerik"
+      class="focus-ring sr-only left-4 top-4 z-50 rounded-full bg-surface px-4 py-2 text-sm font-medium text-text focus:not-sr-only focus:absolute"
+    >
+      Ana içeriğe geç
+    </a>
+    <div class="relative flex min-h-screen flex-col">
+      <SiteHeader pathname={pathname} />
+      <main id="icerik" class="flex-1">
+        <slot />
+      </main>
+      <SiteFooter />
+    </div>
+  </body>
+</html>
