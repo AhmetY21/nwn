@@ -1,7 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="faviconTitle">
-  <title id="faviconTitle">Bedenin Sesi simgesi</title>
-  <rect width="64" height="64" rx="18" fill="#FBF7F2" />
-  <path d="M20 44V20h11.8c8.2 0 12.2 3.8 12.2 9.4 0 5.7-4 9.6-12.2 9.6h-5.5V44H20Zm6.3-10.1h5c4.2 0 6.4-1.5 6.4-4.5 0-2.9-2.2-4.3-6.4-4.3h-5v8.8Z" fill="#1F2420" />
-  <circle cx="48" cy="18" r="5" fill="#C87856" />
+  <title id="faviconTitle">vivência simgesi</title>
+  <rect width="64" height="64" rx="18" fill="#F2EBDD" />
+  <text
+    x="15"
+    y="44"
+    fill="#4A3C28"
+    font-family="Georgia, serif"
+    font-size="42"
+    font-style="italic"
+  >
+    v
+  </text>
+  <path d="M34 18 L40 12 L46 18" fill="none" stroke="#4A3C28" stroke-width="2.8" stroke-linecap="round" />
 </svg>
-

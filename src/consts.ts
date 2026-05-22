@@ -1,6 +1,6 @@
 export const SITE = {
-  name: "Bedenin Sesi",
-  title: "Bedenin Sesi | Beden farkındalığı ve beslenme ilişkisi üzerine",
+  name: "vivência",
+  title: "vivência | Beden farkındalığı ve beslenme ilişkisi üzerine",
   description:
     "Diyet kültüründen uzak, beden farkındalığına ve kanıta dayalı beslenme bilgisine odaklanan Türkçe içerik platformu.",
   url: "https://ahmety21.github.io",

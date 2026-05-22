@@ -16,7 +16,7 @@ export default {
       },
       fontFamily: {
         serif: ["var(--font-serif)", "Georgia", "serif"],
-        sans: ["var(--font-sans)", "Inter", "system-ui", "sans-serif"]
+        sans: ["var(--font-sans)", "Georgia", "serif"]
       },
       boxShadow: {
         card: "0 18px 60px rgba(31, 36, 32, 0.08)"
@@ -25,4 +25,3 @@ export default {
   },
   plugins: [typography]
 };
-
