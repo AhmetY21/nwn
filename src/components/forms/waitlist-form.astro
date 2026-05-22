@@ -1,6 +1,15 @@
 ---
-const waitlistEndpoint = import.meta.env.PUBLIC_WAITLIST_ENDPOINT ?? "";
+import { absoluteUrl } from "../../utils/format";
+
+const configuredEndpoint = import.meta.env.PUBLIC_WAITLIST_ENDPOINT ?? "";
+const waitlistEmail = import.meta.env.PUBLIC_WAITLIST_EMAIL ?? "";
+const formSubmitEndpoint = waitlistEmail
+  ? `https://formsubmit.co/${encodeURIComponent(waitlistEmail)}`
+  : "";
+const waitlistEndpoint = configuredEndpoint || formSubmitEndpoint;
 const hasEndpoint = waitlistEndpoint.length > 0;
+const usesFormSubmit = configuredEndpoint.length === 0 && formSubmitEndpoint.length > 0;
+const thankYouUrl = absoluteUrl("/tesekkurler");
 ---
 
 <section class="rounded-[2rem] border border-border bg-surface p-6 shadow-card md:p-8">
@@ -21,6 +30,14 @@ const hasEndpoint = waitlistEndpoint.length > 0;
         action={waitlistEndpoint}
         class="mt-8 grid gap-5 md:grid-cols-2"
       >
+        {usesFormSubmit ? (
+          <>
+            <input type="hidden" name="_subject" value="vivência bekleme listesi" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value={thankYouUrl} />
+          </>
+        ) : null}
         <div>
           <label class="mb-2 block text-sm font-medium" for="name">
             Adın
@@ -72,10 +89,10 @@ const hasEndpoint = waitlistEndpoint.length > 0;
     ) : (
       <div class="mt-8 rounded-[1.5rem] border border-dashed border-border bg-bg p-6">
         <p class="font-medium">
-          Form altyapısı, e-posta servisi seçimi tamamlandığında etkinleşecek.
+          Bekleme listesi formu neredeyse hazır.
         </p>
         <p class="mt-3 text-sm text-muted">
-          Bileşen ve erişilebilir alanlar hazır. Sadece `PUBLIC_WAITLIST_ENDPOINT` tanımlanarak canlı akışa bağlanabilir.
+          Yayına almak için bir alıcı e-posta adresi ya da form servisi bağlantısı tanımlanması yeterli.
         </p>
       </div>
     )

@@ -40,6 +40,7 @@ jobs:
         run: ASTRO_TELEMETRY_DISABLED=1 npm run build
         env:
           PUBLIC_WAITLIST_ENDPOINT: ${{ vars.PUBLIC_WAITLIST_ENDPOINT }}
+          PUBLIC_WAITLIST_EMAIL: ${{ vars.PUBLIC_WAITLIST_EMAIL }}
 
       - name: Pages artefaktını hazırla
         uses: actions/upload-pages-artifact@v3

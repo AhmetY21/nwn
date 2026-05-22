@@ -1,0 +1,32 @@
+---
+import ButtonLink from "../components/ui/button-link.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Teşekkürler | vivência";
+const description =
+  "vivência bekleme listesine katıldığın için teşekkür ederiz.";
+---
+
+<BaseLayout title={title} description={description} pathname="/tesekkurler">
+  <section class="container-shell py-16 md:py-24">
+    <div class="mx-auto max-w-3xl">
+      <p class="eyebrow">bekleme listesi</p>
+      <p class="brand-wordmark mt-4 text-4xl md:text-5xl">vivência</p>
+      <hr class="ink-divider mt-5" />
+      <h1 class="mt-7 text-5xl italic leading-[1.06] md:text-7xl">
+        Kaydın bize ulaştı.
+      </h1>
+      <p class="mt-6 text-xl italic text-muted md:text-3xl">
+        Yeni yazılar ve kaynaklar hazır olduğunda sakin bir akışla haber vereceğiz.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <ButtonLink href="/makaleler" variant="primary">
+          Makalelere dön
+        </ButtonLink>
+        <ButtonLink href="/" variant="secondary">
+          Ana sayfa
+        </ButtonLink>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

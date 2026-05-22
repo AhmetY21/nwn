@@ -10,6 +10,7 @@ const STATIC_PATHS = [
   "/kaynaklar",
   "/iletisim",
   "/makaleler",
+  "/tesekkurler",
   "/rss.xml"
 ] as const;
 

@@ -11,12 +11,12 @@ npm run build
 
 ## Ortam Değişkenleri
 
-- `PUBLIC_WAITLIST_ENDPOINT`: Bekleme listesi formunun `POST` edeceği uç nokta
+- `PUBLIC_WAITLIST_ENDPOINT`: Formspree, Buttondown veya benzeri bir servisin doğrudan `POST` uç noktası
+- `PUBLIC_WAITLIST_EMAIL`: Endpoint yoksa ücretsiz FormSubmit için alıcı e-posta adresi
 
 ## Varsayımlar
 
-- Geçici site adı: `Bedenin Sesi`
+- Geçici site adı: `vivência`
 - Geçici yayın adresi: `https://ahmety21.github.io/nwn`
-- E-posta servis entegrasyonu henüz seçilmediği için form bileşeni uç nokta verilmediğinde açıklayıcı yedek durum gösterir
+- Bekleme listesi formu özel endpoint veya FormSubmit fallback ile çalışır
 - Font dosyaları ve nihai görsel dil, marka kararı netleştiğinde `public/fonts` ve `src/styles/global.css` üzerinden güncellenebilir
-
