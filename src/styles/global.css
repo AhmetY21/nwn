@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,8 +10,8 @@
   --color-accent: #4a3c28;
   --color-highlight: #d5ded0;
   --color-border: #d9cfbc;
-  --font-serif: "Cormorant Garamond";
-  --font-sans: "Cormorant Garamond";
+  --font-serif: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --font-sans: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
 }
 
 html {
