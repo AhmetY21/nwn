@@ -2,20 +2,22 @@
 import ButtonLink from "../components/ui/button-link.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const title = "Manifesto | Bedenin Sesi";
+const title = "Manifesto | vivência";
 const description =
   "Bu platformun neye karşı durduğunu ve neyi savunduğunu açıkça anlatan manifesto.";
 ---
 
 <BaseLayout title={title} description={description} pathname="/manifesto">
-  <section class="container-shell py-14 md:py-20">
+  <section class="container-shell py-16 md:py-24">
     <div class="mx-auto max-w-4xl">
-      <p class="eyebrow">Manifesto</p>
-      <h1 class="mt-4 text-5xl leading-tight md:text-6xl">
-        Bu alan bir diyet vaadi sunmuyor. Tam tersini savunuyor.
+      <p class="eyebrow">manifesto</p>
+      <p class="brand-wordmark mt-4 text-4xl md:text-5xl">vivência</p>
+      <hr class="ink-divider mt-5" />
+      <h1 class="mt-7 text-5xl italic leading-[1.06] md:text-7xl">
+        Bu alan bir diyet vaadi sunmuyor.
       </h1>
-      <p class="mt-6 max-w-3xl text-lg text-muted md:text-xl">
-        Bedeni yönetilecek bir proje, yemeği denetlenecek bir tehdit ve kişiyi de sürekli eksik biri gibi konumlandıran anlatıların dışında duruyoruz.
+      <p class="mt-6 max-w-3xl text-xl italic text-muted md:text-3xl">
+        Tam tersini savunuyor: bedenle daha yumuşak, daha gerçek, daha sürdürülebilir bir ilişki.
       </p>
       <div class="mt-8 flex flex-wrap gap-4">
         <ButtonLink href="/makaleler" variant="primary">
@@ -31,25 +33,29 @@ const description =
   <section class="container-shell pb-14 md:pb-20">
     <div class="grid gap-6 md:grid-cols-2">
       <article class="rounded-[1.75rem] border border-border bg-surface p-8 shadow-card">
-        <h2 class="text-3xl">Başarı ölçümüz sayı değil, ilişki.</h2>
+        <p class="eyebrow">01 / ilke</p>
+        <h2 class="mt-3 text-4xl italic leading-tight">Başarı ölçümüz sayı değil, ilişki.</h2>
         <p class="mt-4 text-muted">
           Burada amaç, bedeni daha küçük hale getirmek değil; bedeni suç, korku ve kontrol ekseninden çıkarıp bakım ve farkındalık eksenine taşımak.
         </p>
       </article>
       <article class="rounded-[1.75rem] border border-border bg-surface p-8 shadow-card">
-        <h2 class="text-3xl">Diyet kültürü nötr değildir.</h2>
+        <p class="eyebrow">02 / ilke</p>
+        <h2 class="mt-3 text-4xl italic leading-tight">Diyet kültürü nötr değildir.</h2>
         <p class="mt-4 text-muted">
           Bedenler hakkında hiyerarşi kurar, utanmayı normalleştirir ve yemekle ilişkiyi daraltır. Bu yüzden onun dilini yeniden üretmemeyi etik bir sorumluluk olarak görüyoruz.
         </p>
       </article>
       <article class="rounded-[1.75rem] border border-border bg-surface p-8 shadow-card">
-        <h2 class="text-3xl">Bilim, basitleştirme değil açıklık ister.</h2>
+        <p class="eyebrow">03 / ilke</p>
+        <h2 class="mt-3 text-4xl italic leading-tight">Bilim, basitleştirme değil açıklık ister.</h2>
         <p class="mt-4 text-muted">
           Beslenme bilimi karmaşıktır. Kesinlik vaat eden cümleler yerine, neyin güçlü kanıt taşıdığını ve neyin hâlâ tartışmalı olduğunu görünür kılmak istiyoruz.
         </p>
       </article>
       <article class="rounded-[1.75rem] border border-border bg-surface p-8 shadow-card">
-        <h2 class="text-3xl">İnsanlar öğrenebilir.</h2>
+        <p class="eyebrow">04 / ilke</p>
+        <h2 class="mt-3 text-4xl italic leading-tight">İnsanlar öğrenebilir.</h2>
         <p class="mt-4 text-muted">
           Açlık, tokluk, rahatlık, stres ve doyum gibi deneyimler yeniden fark edilebilir. Bu süreç irade testi değil, pratik ve destek gerektiren bir öğrenmedir.
         </p>
@@ -60,7 +66,8 @@ const description =
   <section class="container-shell pb-14 md:pb-20">
     <div class="grid gap-6 lg:grid-cols-[1fr_1.2fr]">
       <aside class="rounded-[1.75rem] border border-border bg-surface p-8 shadow-card">
-        <p class="eyebrow">Ne yapıyoruz?</p>
+        <p class="eyebrow">ne yapıyoruz?</p>
+        <hr class="ink-divider mt-4" />
         <ul class="mt-5 space-y-4 text-muted">
           <li>Diyet kültürünün beden ve zihin üzerindeki etkilerini anlaşılır dille açıyoruz.</li>
           <li>Açlık, tokluk ve duygusal tetiklenme gibi sinyalleri fark etmeye alan açan içerikler yayımlıyoruz.</li>
@@ -70,8 +77,9 @@ const description =
 
       <div class="rounded-[1.75rem] border border-border bg-bg p-1">
         <div class="rounded-[1.5rem] bg-surface p-8">
-          <p class="eyebrow">Ne yapmıyoruz?</p>
-          <h2 class="mt-3 text-3xl leading-tight">
+          <p class="eyebrow">ne yapmıyoruz?</p>
+          <hr class="ink-divider mt-4" />
+          <h2 class="mt-4 text-4xl italic leading-tight">
             Bu platformu bilinçli olarak dar tutuyoruz.
           </h2>
           <div class="mt-5 grid gap-4 md:grid-cols-2">
@@ -107,8 +115,9 @@ const description =
 
   <section class="container-shell pb-14 md:pb-20">
     <div class="rounded-[2rem] border border-border bg-surface p-8 shadow-card md:p-10">
-      <p class="eyebrow">Editoryal söz</p>
-      <h2 class="mt-3 text-3xl leading-tight md:text-4xl">
+      <p class="eyebrow">editoryal söz</p>
+      <hr class="ink-divider mt-4" />
+      <h2 class="mt-4 text-4xl italic leading-tight md:text-5xl">
         Her yazı okuru daha utanmış değil, biraz daha yer açılmış bırakmalı.
       </h2>
       <p class="mt-4 max-w-3xl text-muted">

@@ -90,6 +90,13 @@ img {
   color: rgba(74, 60, 40, 0.7);
 }
 
+.ink-divider {
+  width: 36px;
+  height: 1px;
+  border: 0;
+  background-color: rgba(74, 60, 40, 0.4);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
